@@ -43,10 +43,10 @@ document.addEventListener('keyup', function(event){
     }
 });
 h2Pick.addEventListener('contextmenu', function(event){
-    //event.preventDefault();
+    event.preventDefault();
 });
 h2Pick.addEventListener('auxclick', function(event){
-    //event.preventDefault();
+    event.preventDefault();
     event.target.style.color = 'aquamarine';
     event.target.style.fontSize = '8rem';
 });
@@ -75,7 +75,7 @@ navA.addEventListener('click', function(event){
         event.stopPropagation();
 });
 Array.from(nav).forEach((link) => {
-    link.addEventListener('load',function(event){
+    link.addEventListener('click',function(event){
         event.preventDefault();
     });
 });
